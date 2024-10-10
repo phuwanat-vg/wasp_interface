@@ -30,13 +30,23 @@ ament_target_dependencies(wasp_transmission rclcpp std_msgs sensor_msgs geometry
 target_include_directories(wasp_transmission PUBLIC "${SERIAL_INCLUDE_DIRS}")
 target_link_libraries(wasp_transmission "${SERIAL_LDFLAGS}")
 
-install(TARGETS
+install(
+  
+  TARGETS
   wasp_transmission
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
   DESTINATION lib/${PROJECT_NAME})
   
+
+# Install launch files.
+install(DIRECTORY
+  launch
+  maps
+  config
+  DESTINATION share/${PROJECT_NAME}/
+)
 
 
 if(BUILD_TESTING)

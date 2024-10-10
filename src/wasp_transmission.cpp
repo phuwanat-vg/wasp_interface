@@ -32,8 +32,8 @@ public:
         rpm1_pub_ = create_publisher<std_msgs::msg::Int16>("motor/rpm1", 10);  //Actual Speed
         rpm2_pub_ = create_publisher<std_msgs::msg::Int16>("motor/rpm2", 10);
 
-        odom_raw_pub_ = create_publisher<nav_msgs::msg::Odometry>("odom/raw", 10);
-        odom_ekf_pub_ = create_publisher<nav_msgs::msg::Odometry>("odom", 10);
+        odom_raw_pub_ = create_publisher<nav_msgs::msg::Odometry>("odom", 10);
+        odom_ekf_pub_ = create_publisher<nav_msgs::msg::Odometry>("odom/ekf", 10);
         imu_pub_ = create_publisher<sensor_msgs::msg::Imu>("imu/data", 10);
 
         tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
@@ -237,7 +237,7 @@ public:
                 t.transform.rotation.w = q.w;
 
                 // Send the transformation
-                //tf_broadcaster_->sendTransform(t);
+                tf_broadcaster_->sendTransform(t);
                 
 
             }
@@ -308,7 +308,7 @@ public:
                 ft.transform.rotation.w = fq.w;
 
                 // Send the transformation
-                tf_broadcaster_->sendTransform(ft);
+                //tf_broadcaster_->sendTransform(ft);
                 
 
             }
