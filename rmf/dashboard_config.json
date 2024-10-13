@@ -1,0 +1,34 @@
+{
+  "world_name" : "test map",  
+  "valid_task": ["Delivery", "Loop"],
+  "task": {
+    "Delivery": {
+      "option": {
+        "coke": {
+          "pickup_place_name": "pantry",
+          "pickup_dispenser": "coke_dispenser",
+          "dropoff_place_name": "hardware_2",
+          "dropoff_ingestor": "coke_ingestor"
+        }
+      }
+    },
+    "Loop": {
+      "places": [
+        "home",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    "Clean": {
+    },
+    "Station": {
+    },
+    "Patrol": {
+    },
+    "Charging": {
+    }
+  }
+}

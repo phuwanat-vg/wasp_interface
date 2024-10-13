@@ -1,0 +1,55 @@
+building_name: test_map
+levels:
+  L1:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0, undock_name: home}
+    - - 1
+      - 0
+      - {dock_name: home, speed_limit: 0}
+    - - 1
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 1
+      - {speed_limit: 0}
+    - - 3
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 3
+      - {speed_limit: 0}
+    - - 4
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0}
+    vertices:
+    - - 4.633078310197472
+      - -3.93490054878137
+      - {dock_name: home, is_charger: true, is_parking_spot: true, name: home, spawn_robot_name: robot1,
+        spawn_robot_type: robot1}
+    - - 3.4719781203527997
+      - -3.9578849209287807
+      - {is_parking_spot: true, name: A, pickup_dispenser: pick1}
+    - - 2.345384442298506
+      - -3.8889118354403727
+      - {is_holding_point: true, is_parking_spot: true, name: B}
+    - - 3.414507205461185
+      - -6.268583130021334
+      - {is_holding_point: false, is_passthrough_point: true, name: C}
+    - - 4.253726340011227
+      - -6.314571843362331
+      - {dropoff_ingestor: drop1, is_holding_point: false, is_parking_spot: false,
+        name: D}
+    - - 4.242224169414434
+      - -7.510158575951206
+      - {is_holding_point: true, is_parking_spot: true, name: E}

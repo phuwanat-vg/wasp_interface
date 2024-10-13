@@ -1,0 +1,72 @@
+coordinate_system: reference_image
+crowd_sim:
+  agent_groups:
+    - {agents_name: [robot1], agents_number: 1, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+  agent_profiles:
+    - {ORCA_tau: 1, ORCA_tauObst: 0.40000000000000002, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
+  enable: 0
+  goal_sets: []
+  model_types: []
+  obstacle_set: {class: 1, file_name: L1_navmesh.nav, type: nav_mesh}
+  states:
+    - {final: 1, goal_set: -1, name: external_static, navmesh_file_name: ""}
+  transitions: []
+  update_time_step: 0.10000000000000001
+graphs:
+  {}
+levels:
+  L1:
+    drawing:
+      filename: map.png
+    elevation: 0
+    floors:
+      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
+        vertices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    lanes:
+      - [10, 11, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [11, 12, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [11, 13, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [13, 14, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [14, 15, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+    layers:
+      scan:
+        color: [1, 0, 0, 0.5]
+        filename: map.png
+        transform:
+          scale: 0.02
+          translation_x: 0
+          translation_y: 0
+          yaw: 0
+        visible: true
+    measurements:
+      - [8, 4, {distance: [3, 1.54]}]
+    vertices:
+      - [62.759999999999998, 118.756, 0, ""]
+      - [270.58499999999998, 126.23999999999999, 0, ""]
+      - [264.82799999999997, 222.95599999999999, 0, ""]
+      - [208.41, 221.80500000000001, 0, ""]
+      - [208.98599999999999, 270.738, 0, ""]
+      - [253.88999999999999, 274.76799999999997, 0, ""]
+      - [245.83000000000001, 454.95999999999998, 0, ""]
+      - [130.11600000000001, 447.476, 0, ""]
+      - [133.56999999999999, 254.619, 0, ""]
+      - [60.457000000000001, 248.286, 0, ""]
+      - [232.01300000000001, 197.05000000000001, 0, home, {dock_name: [1, home], is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, robot1], spawn_robot_type: [1, stephen]}]
+      - [173.86799999999999, 198.20099999999999, 0, A, {is_parking_spot: [4, true], pickup_dispenser: [1, pick1]}]
+      - [117.45099999999999, 194.74700000000001, 0, B, {is_holding_point: [4, true], is_parking_spot: [4, true]}]
+      - [170.99000000000001, 313.91500000000002, 0, C, {is_holding_point: [4, false], is_passthrough_point: [4, true]}]
+      - [213.01599999999999, 316.21800000000002, 0, D, {dropoff_ingestor: [1, drop1], is_holding_point: [4, false], is_parking_spot: [4, false]}]
+      - [212.44, 376.08999999999997, 0, E, {is_holding_point: [4, true], is_parking_spot: [4, true]}]
+    walls:
+      - [1, 2, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [2, 3, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [3, 4, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [4, 5, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [5, 6, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [6, 7, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [7, 8, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [8, 9, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [9, 0, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [1, 0, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+lifts: {}
+name: test_map

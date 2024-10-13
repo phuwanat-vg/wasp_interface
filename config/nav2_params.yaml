@@ -17,7 +17,7 @@ amcl:
     laser_max_range: 100.0
     laser_min_range: -1.0
     laser_model_type: "likelihood_field"
-    max_beams: 60
+    max_beams: 100
     max_particles: 8000
     min_particles: 2000
     odom_frame_id: "odom"
@@ -124,13 +124,13 @@ controller_server:
     FollowPath:
       plugin: "dwb_core::DWBLocalPlanner"
       debug_trajectory_details: True
-      min_vel_x: -0.2
+      min_vel_x: 0.0
       min_vel_y: 0.0
-      max_vel_x: 0.2
+      max_vel_x: 0.6
       max_vel_y: 0.0
       max_vel_theta: 0.6
       min_speed_xy: 0.0
-      max_speed_xy: 0.25
+      max_speed_xy: 0.45
       min_speed_theta: 0.1
       # Add high threshold velocity for turtlebot 3 issue.
       # https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/75

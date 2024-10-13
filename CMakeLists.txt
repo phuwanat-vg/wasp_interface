@@ -24,8 +24,10 @@ pkg_check_modules(SERIAL REQUIRED libserial)
 # find_package(<dependency> REQUIRED)
 
 add_executable(wasp_transmission src/wasp_transmission.cpp)
+add_executable(fake_battery src/fake_battery.cpp)
 ament_target_dependencies(wasp_transmission rclcpp std_msgs sensor_msgs geometry_msgs nav_msgs tf2_geometry_msgs
       tf2_ros)
+ament_target_dependencies(fake_battery rclcpp sensor_msgs)
 
 target_include_directories(wasp_transmission PUBLIC "${SERIAL_INCLUDE_DIRS}")
 target_link_libraries(wasp_transmission "${SERIAL_LDFLAGS}")
@@ -34,6 +36,7 @@ install(
   
   TARGETS
   wasp_transmission
+  fake_battery
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
@@ -45,6 +48,7 @@ install(DIRECTORY
   launch
   maps
   config
+  rmf
   DESTINATION share/${PROJECT_NAME}/
 )
 
